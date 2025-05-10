@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../config/firebase-config";
-import { collection,
+import { db } from "../../config/firebase-config";
+import {
+  collection,
   addDoc,
   query,
   where,
   onSnapshot,
-  DocumentData } from "firebase/firestore";
+  DocumentData,
+} from "firebase/firestore";
 
 interface ChatProps {
   chatID: string;

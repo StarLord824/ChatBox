@@ -7,9 +7,7 @@ export function ChatPage() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       {chatID ? (
         <>
-          <h1 className="text-3xl font-bold">
-            ChatRoom Accessed
-          </h1>
+          <h1 className="text-3xl font-bold">ChatRoom Accessed</h1>
           <Chat chatID={chatID} />
         </>
       ) : (
