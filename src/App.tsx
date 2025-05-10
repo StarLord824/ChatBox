@@ -16,7 +16,7 @@ export function App() {
   console.log(authStatus);
   return (
     <div className="app-container">
-      <Header/>
+      <Header isAuth={authStatus} />
       {/* <Chat chatID="abcd"></Chat> */}
       <h1 className="text-4xl font-bold text-center">Welcome to Chat App</h1>
       {authStatus ? <ChatPage /> : <Auth setAuthStatus={setAuthStatus} />}

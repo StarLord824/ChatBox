@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@prisma/client": "^6.7.0",
     "@tailwindcss/vite": "^4.0.12",
     "firebase": "^11.4.0",
+    "prisma": "^6.7.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",

@@ -1,5 +1,5 @@
 import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../config/firebase-config";
+import { auth, provider } from "../../config/firebase-config";
 import Cookies from "universal-cookie";
 
 const Auth = ({
