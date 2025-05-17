@@ -1,13 +1,18 @@
 import OptionBar from './OptionsBar'
-import UserName from './UserName'
 
 const Header = (props: { isAuth: boolean }) => {
 
+  const userName = localStorage.getItem('userName') || 'BlackHat'
   return (
-    <header className='absolute top-0 flex justify-around items-center bg-gray-800 text-white p-4 w-screen h-[100px] mb-0.5'>
-        {props.isAuth && <UserName username='BlackHat'/>}
+    <header className='flex justify-around items-center text-white w-screen h-1/10 mt-1 mb-1 p-4 bg-neutral-900'>
+        {
+          props.isAuth && 
+            <div>
+              {userName}
+            </div>
+        }
         <div>
-            AppoChat
+            SansuChat
         </div>
         {props.isAuth && <OptionBar />}
     </header>
