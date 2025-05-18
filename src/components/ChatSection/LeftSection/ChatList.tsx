@@ -1,10 +1,10 @@
-import { PrismaClient } from '@prisma/client'
-import { useState } from 'react';
+// import { PrismaClient } from '@prisma/client'
+// import { useState } from 'react';
 import Status from './Status';
 import SearchChat from './SearchChat';
 import List from './List';
 
-const client = new PrismaClient();
+// const client = new PrismaClient();
 
 const ChatList = () => {
     // const [chats, setChats] = useState([]);

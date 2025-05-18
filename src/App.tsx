@@ -31,7 +31,7 @@ const DoAuth = (props: { auth: (isAuth: boolean) => void }) => {
       alert('Invalid email or password')
   
   }
-  
+
   const login = async ( data: { email: string, password: string } ) => {
     const result = await axios.post('http://localhost:3000/api/v1/user/login', {
       email: data.email,
@@ -50,11 +50,15 @@ const DoAuth = (props: { auth: (isAuth: boolean) => void }) => {
   return (
     <div className='flex flex-col items-center justify-center h-9/10 w-full mx-1 mb-1 px-2'>
       <div className='flex flex-col items-center justify-center h-screen w-full text-white'>
-          <input type="text" placeholder="name" className='text-white text-center p-0.5 mx-auto bg-gray-800 border-white my-2' onChange={(e) => setName(e.target.value)} />
-          <input type="text" placeholder="email" className='text-white text-center p-0.5 mx-auto bg-gray-800 border-white my-2' onChange={(e) => setEmail(e.target.value)} />
-          <input type="text" placeholder="password" className='text-white text-center p-0.5 mx-auto bg-gray-800 border-white my-2' onChange={(e) => setPassword(e.target.value)} />
-          <button onClick={() => signup( { name, email, password } )}>SignUp</button>
-          <button onClick={() => login( { email, password } )}>SignIn</button>
+          
+          <input type="text" placeholder="username" className='input-field' onChange={(e) => setName(e.target.value)} />
+          <input type="text" placeholder="email" className='input-field' onChange={(e) => setEmail(e.target.value)} /> 
+          <input type="text" placeholder="password" className='input-field' onChange={(e) => setPassword(e.target.value)} />
+          
+          <div className="flex items-center justify-around w-1/4 mx-auto my-8 text-white">
+            <button onClick={() => signup( { name, email, password } )} className='button'>Sign Up</button>
+            <button onClick={() => login( { email, password } )} className='button'>Login</button>
+          </div>
       </div>
     </div>
   )
